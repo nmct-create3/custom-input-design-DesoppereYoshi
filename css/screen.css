@@ -702,11 +702,11 @@ input::placeholder {
 */
 
 .c-option-list {
-
+    margin-bottom: 24px;
 }
 
 .c-option-list__item {
-
+    margin-bottom: 12px;
 }
 
 /*
@@ -724,6 +724,8 @@ input::placeholder {
         Do magic stuff here, for example:
         background-color: red;
     */
+    
+ 
 }
 
 .c-custom-input-option-hidden:checked + .c-custom-input-option-label .c-custom-input-option__symbol {
@@ -731,7 +733,152 @@ input::placeholder {
         Do magic stuff here, for example:
         fill: blue;
     */
+    
+    opacity: 1;    
+    -webkit-transition: all 100ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+    -moz-transition: all 100ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+      -o-transition: all 100ms cubic-bezier(0.250, 0.250, 0.750, 0.750); 
+         transition: all 100ms cubic-bezier(0.250, 0.250, 0.750, 0.750); /* linear */
 }
+
+.c-custom-input-option-hidden:active + .c-custom-input-option-label .c-custom-input-option ,
+.c-custom-input-option-hidden:focus + .c-custom-input-option-label .c-custom-input-option {
+    border: 1px solid var(--color-alpha-x-light);
+    box-shadow: 0px 0px 1px 2px #DCEAFF;
+}
+
+.c-custom-input-option-hidden:hover + .c-custom-input-option-label .c-custom-input-option {
+border: 1px solid var(--color-neutral-xx-light)
+}
+
+.c-custom-input-option__symbol {
+    opacity: 0;
+   /* transition: opacity var(--transition-alpha); */
+
+    display:block;
+}
+
+
+.c-custom-input-option--checkbox .c-custom-input-option__symbol {
+    width:10px;
+    height: 10px;
+    fill:var(--color-alpha);
+    display:flex;
+  }
+  
+  .c-custom-input-option--radio .c-custom-input-option__symbol {
+    width:6px;
+    height: 6px;
+    border-radius: 100%;
+    background-color: var(--color-alpha);
+    display:flex;
+  }
+
+
+.c-custom-input-option-label{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-custom-input-option{
+    display:flex;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #E2E3E7;
+    margin-right: 8px;
+    box-shadow: var(--inset-shadow);
+    border-radius: var(--radius);
+    align-items: center;
+    justify-content: center;
+
+}
+
+.c-custom-input-option-label:hover + .c-custom-input-option{
+
+}
+
+
+.c-custom-input-option--radio{
+    border-radius: 100%;
+}
+
+
+.c-toggle__label{
+    display:flex;
+    align-items: center;
+}
+
+.c-toggle__input{
+    display:block;
+    width:48px;
+    height: 24px;
+    border: 1px solid #E2E3E7;
+    background-color:#E2E3E7;
+    margin-right: 8px;
+    box-shadow: var(--inset-shadow);
+    border-radius: 34px;
+}
+
+.c-toggle__input::after {
+    display:block;
+    content:"";
+    width: 22px;
+    height: 22px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    border-radius: 100%;
+    transition: all var(--transition-alpha);
+}
+
+.c-custom-input-option-hidden:checked + .c-toggle__label .c-toggle__input::after {
+    transform: translateX(24px);
+}
+.c-custom-input-option-hidden:checked + .c-toggle__label .c-toggle__input{
+    border-color:#2E77E6;
+    background-color: #3385FF;
+    transition: border-color 500ms;
+    transition: background-color 500ms;
+}
+
+.c-custom-input-option-hidden:hover + .c-toggle__label .c-toggle__input,
+.c-custom-input-option-hidden:focus + .c-toggle__label .c-toggle__input{
+    border: 1px solid var(--color-alpha-x-light);
+    box-shadow: 0px 0px 1px 2px #DCEAFF;
+
+}
+
+.c-toggle__input--alternative{
+    display:block;
+    width:40px;
+    height: 20px;
+    border: 1px solid #E2E3E7;
+    background-color:#E2E3E7;
+    margin-right: 8px;
+    box-shadow: var(--inset-shadow);
+    border-radius: 34px;
+}
+
+.c-toggle__input--alternative::after {
+    width:22px;
+    height: 22px;
+    border: 1px solid #E2E3E7;
+    transform: translate(-2px,-2px);
+
+}
+
+.c-custom-input-option-hidden:checked + .c-toggle__label .c-toggle__input--alternative::after {
+    border: none;
+    background-color: #3385FF;
+    transform: translate(20px, -1px);
+}
+
+.c-custom-input-option-hidden:checked + .c-toggle__label .c-toggle__input--alternative{
+    border: none;
+    background-color: #81ADF0;
+}
+
+
 
 /*------------------------------------*\
 #UTILITIES
