@@ -864,7 +864,6 @@ border: 1px solid var(--color-neutral-xx-light)
     height: 22px;
     border: 1px solid #E2E3E7;
     transform: translate(-2px,-2px);
-
 }
 
 .c-custom-input-option-hidden:checked + .c-toggle__label .c-toggle__input--alternative::after {
@@ -878,7 +877,52 @@ border: 1px solid var(--color-neutral-xx-light)
     background-color: #81ADF0;
 }
 
+.c-toggle-list__item + li{
+    border-top: 1px solid #E2E3E7;
+    padding-top: 12px;
+}
 
+.c-toggle-list__item .c-toggle__input{
+    margin-right: 0;
+}
+.c-toggle__label--inverted{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.c-custom-select{
+    position: relative;
+    display:block;  
+}
+
+.c-custom-select__input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    border: 1px solid var(--color-neutral-xxx-light);
+    border-radius: var(--radius);
+    color: var(--color-neutral-xxxx-dark);
+    background-color: #fff;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 11px 16px;
+    outline: none;
+    box-shadow: var(--inset-shadow);
+    transition: border var(--transition-alpha);
+}
+
+.c-custom-select__symbol{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    fill:#B5B6C0;
+    right: 12px;
+    top: 12px;
+    pointer-events: none;
+}
 
 /*------------------------------------*\
 #UTILITIES
